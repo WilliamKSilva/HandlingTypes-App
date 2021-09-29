@@ -7,6 +7,8 @@ interface State {
    setEmail: React.Dispatch<React.SetStateAction<string>>
    password: string | number; 
    setPassword: React.Dispatch<React.SetStateAction<string>>
+   isClicked: boolean, 
+   setClicked: React.Dispatch<React.SetStateAction<boolean>>
 } 
 
 
@@ -21,7 +23,7 @@ export function InputContextProvider({ children } : InputProvider) {
     const [name, setName] = useState("none"); 
     const [email, setEmail] = useState("none");
     const [password, setPassword] = useState("none");
-   
+    const [isClicked, setClicked] = useState(false);
 
     return (
         <InputContext.Provider
@@ -31,7 +33,9 @@ export function InputContextProvider({ children } : InputProvider) {
             email, 
             setEmail, 
             password, 
-            setPassword
+            setPassword, 
+            isClicked, 
+            setClicked
         }}>
         {children}
         </InputContext.Provider>
