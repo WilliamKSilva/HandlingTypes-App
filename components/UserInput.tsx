@@ -5,14 +5,16 @@ import { InputContext } from "../Context/InputText";
 
 const UserInput: React.FC = () => {
     const {name, setName} = useContext(InputContext)
+    const {email, setEmail} = useContext(InputContext)
+    const {password, setPassword} = useContext(InputContext)
 
     console.log(name)
 
     return(
             <View style={styles.inputTextContainer}>
                     <TextInput  onChangeText={(text) => setName(text)} placeholder="Name" selectionColor='#D3D3D3' placeholderTextColor="#D3D3D3" style={styles.inputTextName} />
-                    <TextInput  placeholder="Email" selectionColor='#D3D3D3' placeholderTextColor="#D3D3D3" style={styles.inputTextEmail}/>
-                    <TextInput  placeholder="Password" selectionColor='#D3D3D3' placeholderTextColor="#D3D3D3" style={styles.inputTextPassword}/>
+                    <TextInput  onChangeText={(text) => setEmail(text)} placeholder="Email" selectionColor='#D3D3D3' placeholderTextColor="#D3D3D3" style={styles.inputTextEmail}/>
+                    <TextInput  onChangeText={(text) => setPassword(text)} placeholder="Password" selectionColor='#D3D3D3' placeholderTextColor="#D3D3D3" style={styles.inputTextPassword}/>
             </View>
     )
 }
