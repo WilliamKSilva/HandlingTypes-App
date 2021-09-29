@@ -1,16 +1,19 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import  UserInput from './components/UserInput';
+import Register from './Pages/Register';
+import { InputContextProvider } from './Context/InputText';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <View>
-          <UserInput />
-      </View>
-    </View>
-  );
+        <InputContextProvider>
+            <View style={styles.container}>
+                <View>
+                    <Register />
+                </View>
+            </View>
+          </InputContextProvider>
+    );  
 }
 
 const styles = StyleSheet.create({
