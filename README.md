@@ -1,7 +1,7 @@
 # HandlingTypes-App
 
 
-https://img.shields.io/github/last-commit/WilliamKSilva/HandlingTypes-App
+![Github](https://img.shields.io/github/last-commit/WilliamKSilva/HandlingTypes-App)
 
 
 > Projeto feito para fins de estudo do TypeScript em conjunto com o React Native, explorando os usos da Context API e dos States dos componentes da aplicação.
